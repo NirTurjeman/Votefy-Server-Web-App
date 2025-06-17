@@ -26,7 +26,7 @@ export const inactivatePoll = async (pollId: string) => {
 };
 
 export const isPollActive = async (pollId: string) => {
-  const response = await api.get(`/votes/definitions/${pollId}/active`);
+  const response = await api.get<boolean>(`/votes/definitions/${pollId}/active`);
   return response.data as boolean;
 };
 
@@ -36,25 +36,25 @@ export const getPollVotesDistribution = async (pollId: string) => {
 };
 
 export const getPollVoters = async (pollId: string): Promise<VoterDto[]> => {
-  const response = await api.get(`/votes/${pollId}/voters`);
+  const response = await api.get<VoterDto[]>(`/votes/${pollId}/voters`);
   return response.data;
 };
 export const login = async (adminID: string, password: string):Promise<boolean> => {
-  const response = await api.post('/votes/login', {
+  const response = await api.post<boolean>('/votes/login', {
     adminID: adminID,
     password: password,
   });
   return response.data;
 }
 export const createAdmin = async (adminID: string, password: string) => {
-  const response = await api.post('/votes/create-admin', {
+  const response = await api.post<boolean>('/votes/create-admin', {
     adminID: adminID,
     password: password,
   });
   return response.data;
 }
 export const createPoll = async (title: string, type: string, options: string[]) => {
-  return api.post('/votes/definitions', {
+  return api.post<boolean>('/votes/definitions', {
     title,
     type,
     options,

@@ -7,6 +7,7 @@
     <list default="true" id="a15a07dc-36dc-47a1-abf5-d9ddc085d2c6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Server/votefy_server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/votefy_server/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/votefy_server/src/votefy/votefy.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/votefy_server/src/votefy/votefy.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,7 @@
       <workItem from="1749412322122" duration="51000" />
       <workItem from="1749412515715" duration="1035000" />
       <workItem from="1750143991302" duration="668000" />
-      <workItem from="1750146638756" duration="7113000" />
+      <workItem from="1750146638756" duration="7925000" />
     </task>
     <servers />
   </component>
