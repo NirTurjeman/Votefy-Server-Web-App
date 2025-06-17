@@ -30,3 +30,7 @@ The app is designed to showcase how the Votefy client library works in practice.
 ## Purpose
 
 This app is intentionally simple. It serves as a proof-of-concept to help developers understand how to use the Votefy library in a real application.
+
+## 📹 App Test Video
+
+- [▶️ App Test](./App_Demo.mov)
