@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
 
@@ -21,11 +23,18 @@ class LoginActivity : AppCompatActivity() {
 
             if (userId.isEmpty()) {
                 Toast.makeText(this, "Please enter your User ID", Toast.LENGTH_SHORT).show()
-            } else {
-                val intent = Intent(this, MainActivity::class.java)
-                intent.putExtra("USER_ID", userId)
-                startActivity(intent)
-                finish()
+                return@setOnClickListener
+            }
+
+            lifecycleScope.launch {
+                try {
+                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    intent.putExtra("USER_ID", userId)
+                    startActivity(intent)
+                    finish()
+                } catch (e: Exception) {
+                    Toast.makeText(this@LoginActivity, "Failed to connect to server", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }

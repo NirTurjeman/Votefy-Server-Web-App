@@ -8,14 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import votefy.VotefyClient
-import votefy.model.UserVote
 import android.content.Intent
 import android.graphics.Typeface
 import android.widget.Button
 import android.graphics.Color
 import android.widget.EditText
 import android.widget.Toast
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,15 +30,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        client = VotefyClient("https://cd2f-2a00-a041-e94b-1700-a8a5-1fac-a041-6e24.ngrok-free.app/")
         welcomeText = findViewById(R.id.welcomeText)
         userId = intent.getStringExtra("USER_ID") ?: ""
         welcomeText.text = "Welcome, $userId"
         welcomeText.setTextColor(Color.GRAY)
         welcomeText.setTypeface(null, Typeface.BOLD)
         welcomeText.textSize = 28f
-        client = VotefyClient()
-
         checkForOpenVotes()
+
     }
 
     private fun checkForOpenVotes() {
@@ -103,7 +101,7 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 val success = client.voter.vote(
-                    UserVote(
+                    votefy.model.UserVote(
                         userID = userId,
                         pollID = voteId,
                         value = answer
@@ -126,5 +124,9 @@ class MainActivity : AppCompatActivity() {
             .setMessage(message)
             .setPositiveButton("OK", null)
             .show()
+    }
+    private suspend fun printDef(){
+        val def = client.admin.getAllDefinitions()
+        Log.e("defs","$def")
     }
 }
