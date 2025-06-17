@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
+import { createAdmin } from '../services/pollsService';
 function CreateAdminPage() {
   const [adminID, setAdminID] = useState('');
   const [password, setPassword] = useState('');
@@ -9,17 +8,14 @@ function CreateAdminPage() {
   const navigate = useNavigate();
 
   const handleCreate = async () => {
-    try {
-      await axios.post('http://localhost:3000/votes/create-admin', {
-        adminID,
-        password,
-      });
-      navigate('/'); // חזרה לעמוד הראשי אחרי יצירה
-    } catch (err) {
-      console.error(err);
-      setError('Failed to create admin');
-    }
-  };
+  try {
+    await createAdmin(adminID, password);
+    navigate('/');
+  } catch (err) {
+    console.error(err);
+    setError('Failed to create admin');
+  }
+};
 
   return (
     <div style={{

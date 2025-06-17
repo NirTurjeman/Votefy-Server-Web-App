@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { login } from '../services/pollsService';
 
 function AuthPage() {
   const [adminID, setAdminID] = useState('');
@@ -10,14 +10,8 @@ function AuthPage() {
 
  const handleLogin = async () => {
   try {
-    const response = await axios.post('http://localhost:3000/votes/login', {
-      adminID,
-      password,
-    });
-
-    console.log('Response:', response.data);
-
-    if (response.data === true) {
+    const success = await login(adminID, password);
+    if (success) {
       sessionStorage.setItem('isAuthenticated', 'true');
       navigate('/');
     } else {
@@ -25,7 +19,7 @@ function AuthPage() {
     }
   } catch (err) {
     console.error(err);
-    setError('Invalid Admin ID or Password');
+    setError('Login failed');
   }
 };
   return (

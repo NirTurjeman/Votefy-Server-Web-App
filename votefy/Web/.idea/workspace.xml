@@ -4,32 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a15a07dc-36dc-47a1-abf5-d9ddc085d2c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../votefy/Web/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/votefy_server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/votefy_server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a15a07dc-36dc-47a1-abf5-d9ddc085d2c6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;NirTurjeman&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NirTurjeman"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/NirTurjeman/Votefy-Server-Web-App.git&quot;,
-    &quot;accountId&quot;: &quot;510bbcb0-0720-4628-a110-ecb5567467a5&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/NirTurjeman/Votefy-Server-Web-App.git",
+    "accountId": "510bbcb0-0720-4628-a110-ecb5567467a5"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -42,15 +37,14 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/nirturjeman/Desktop/תואר/שנה ב/Web",
+    "last_opened_file_path": "/Users/nirturjeman/Desktop/תואר/שנה ב/votefy/Web",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "npm.npm dev.executor": "Run",
-    "ts.external.directory.path": "/Users/nirturjeman/Desktop/תואר/שנה ב/Web/Votefy-Web/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/nirturjeman/Desktop/תואר/שנה ב/votefy_web/my-data-dashboard/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -89,8 +83,7 @@
       <workItem from="1749155990585" duration="39000" />
       <workItem from="1749412322122" duration="51000" />
       <workItem from="1749412515715" duration="1035000" />
-      <workItem from="1750143991302" duration="668000" />
-      <workItem from="1750146638756" duration="3696000" />
+      <workItem from="1750143991302" duration="1503000" />
     </task>
     <servers />
   </component>

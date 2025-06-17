@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getPolls, deletePoll } from '../services/api';
+import { getPolls, deletePoll } from '../services/pollsService.ts';
 import { useNavigate } from 'react-router-dom';
 
 type Poll = {
@@ -22,7 +22,7 @@ const fetchPolls = async () => {
 
   const handleDelete = async (pollId: string) => {
     await deletePoll(pollId);
-    fetchPolls();
+    await fetchPolls();
   };
 
   useEffect(() => {

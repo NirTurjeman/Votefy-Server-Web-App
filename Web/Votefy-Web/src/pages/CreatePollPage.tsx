@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { createPoll } from '../services/pollsService';
 
 function CreatePollPage() {
   const [title, setTitle] = useState('');
@@ -22,11 +22,7 @@ function CreatePollPage() {
     const optionsToSend = type === 'OPEN_POLL' ? [] : options.filter((opt) => opt.trim() !== '');
 
     try {
-      await axios.post('http://localhost:3000/votes/definitions', {
-        title,
-        type,
-        options: optionsToSend,
-      });
+    await createPoll(title, type, optionsToSend);
       navigate('/');
     } catch (err) {
       console.error(err);

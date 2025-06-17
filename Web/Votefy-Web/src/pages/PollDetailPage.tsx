@@ -6,7 +6,7 @@ import {
   isPollActive,
   activatePoll,
   inactivatePoll,
-} from '../services/api';
+} from '../services/pollsService.ts';
 import {
   BarChart,
   Bar,
