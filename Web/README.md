@@ -79,3 +79,6 @@ npm run dev
 ```bash
 npm run build
 ```
+## 📹 Web Test Video
+
+- [▶️ Web Test](./Web_Test.mov)
