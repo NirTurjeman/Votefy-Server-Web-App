@@ -87,3 +87,5 @@ npm run build
 
 You can access the live version of the Votefy web app here:  
 👉 [https://votefy-web.onrender.com](https://votefy-web.onrender.com)
+- Username: admin
+- Password: 123
