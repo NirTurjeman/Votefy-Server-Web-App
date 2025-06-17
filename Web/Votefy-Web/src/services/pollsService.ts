@@ -1,15 +1,9 @@
 // src/services/pollsService.ts
 import { api } from './api';
-
-export type VoterDto = {
-  userID: string;
-  pollID: string;
-  value: string;
-  createdAt: string;
-};
-
+import type { Poll } from '../DTO/PollDTO';
+import type { VoterDto } from '../DTO/VoterDTO';
 export const getPolls = async () => {
-  const response = await api.get('/votes/definitions');
+  const response = await api.get<Poll>('/votes/definitions');
   return response.data;
 };
 

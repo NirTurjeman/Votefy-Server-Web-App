@@ -1,23 +1,18 @@
 import { useEffect, useState } from 'react';
 import { getPolls, deletePoll } from '../services/pollsService.ts';
 import { useNavigate } from 'react-router-dom';
-
-type Poll = {
-  id: string;
-  title: string;
-  isActive: boolean;
-  type: string;
-  options: string[];
-  createdAt: string;
-};
+import type { Poll } from '../DTO/PollDTO'
 function PollListPage() {
   const [polls, setPolls] = useState<Poll[]>([]);
   const navigate = useNavigate();
 
 const fetchPolls = async () => {
-  const data = await getPolls();
-  console.log('polls:', data, 'typeof:', typeof data, 'Array.isArray:', Array.isArray(data));
-  setPolls(data);
+  const [data] = await Promise.all([getPolls()]);
+  if (Array.isArray(data)) {
+    setPolls(data);
+  } else {
+    console.error('Error: Expected an array of polls, but received:', data);
+  }
 };
 
   const handleDelete = async (pollId: string) => {
