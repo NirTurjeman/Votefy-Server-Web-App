@@ -1,0 +1,23 @@
+# Ignore build output
+dist/
+
+# Ignore node_modules (redundant but safe)
+node_modules/
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore logs
+logs
+*.log
+
+# Ignore coverage reports (if you use tests later)
+coverage/
+
+# Optional: ignore prisma generated client (but usually don't need to)
+# prisma/client/
+
+# Optional: ignore IDE settings (sometimes useful)
+.vscode/
+.idea/
