@@ -1,6 +1,13 @@
 # Votefy
 
-**Votefy** is a full-stack voting system that includes a backend server, a web-based admin dashboard, and a mobile app. It supports both open-text and multiple-choice voting, with real-time results and analytics.
+**Votefy** is a full-stack voting system designed for flexibility and integration.
+
+It consists of:
+- 🗳️ A backend server (NestJS + Prisma)
+- 📊 A web-based admin dashboard (React + Tailwind)
+- 📱 A mobile app (Kotlin)
+- 📦 A Kotlin SDK for client integration ([see SDK repo](https://github.com/NirTurjeman/Votefy-SDK))
+
 
 ## Project Structure
 
